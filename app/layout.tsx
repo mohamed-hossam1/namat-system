@@ -25,7 +25,6 @@ export default function RootLayout({
             className="absolute inset-0 opacity-[0.03]"
             style={{
               backgroundImage: `linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)`,
-              size: "40px 40px",
               backgroundSize: "60px 60px",
             }}
           />

@@ -44,7 +44,7 @@ export default function NavList() {
           <li
             key={item.name}
             onMouseEnter={handleMouseEnter}
-            className="z-10 block cursor-pointer px-4 py-2  font-medium text-[17px] transition-colors duration-200 hover:text-secondary/90 text-secondary "
+            className="z-10 block cursor-pointer px-4 py-2  font-medium text-[17px] transition-colors duration-200 hover:text-text-color/90 text-text-color "
           >
             <Link href={item.href}>{item.name}</Link>
           </li>
@@ -52,7 +52,7 @@ export default function NavList() {
         <motion.li
           animate={{ left, width, opacity }}
           transition={{ type: "spring", stiffness: 400, damping: 30 }}
-          className="absolute inset-0 my-1.5 rounded-full bg-frame"
+          className="absolute inset-0 my-1.5 rounded-full bg-white/10"
         />
       </ul>
   );

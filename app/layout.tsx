@@ -2,8 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/lib/providers/theme-provider";
-
-
+import ScrollYProgress from "@/components/ScrollYProgress";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -18,8 +17,22 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={` antialiased`}
+        className={` antialiased selection:bg-primary selection:text-white`}
       >
+        <ScrollYProgress></ScrollYProgress>
+        <div className="fixed inset-0 z-0">
+          <div
+            className="absolute inset-0 opacity-[0.03]"
+            style={{
+              backgroundImage: `linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)`,
+              size: "40px 40px",
+              backgroundSize: "60px 60px",
+            }}
+          />
+
+          <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-primary/5 blur-[120px] rounded-full" />
+          <div className="absolute bottom-[10%] right-[-5%] w-[40%] h-[40%] bg-primary/10 blur-[150px] rounded-full" />
+        </div>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

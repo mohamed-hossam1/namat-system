@@ -25,10 +25,10 @@ const ErrorAlert = ({ isOpen, onClose, message }: ErrorAlertProps) => {
               </button>
             </div>
 
-            <div className="p-4 sm:p-10 overflow-y-auto">
-              <div className="flex gap-x-4 md:gap-x-7">
-                <span className="shrink-0 inline-flex justify-center items-center size-11 sm:w-15.5 sm:h-15.5 rounded-full border-4 border-red-50 bg-red-100 text-red-500 dark:bg-red-700 dark:border-red-600 dark:text-red-100">
-                  <TriangleAlert />
+            <div className="p-4  sm:p-10 overflow-y-auto">
+              <div className="flex justify-center items-center  gap-x-4 md:gap-x-7">
+                <span className="shrink-0 inline-flex justify-center items-center size-11 sm:w-15.5 sm:h-15.5 rounded-full border border-border ">
+                  <TriangleAlert color="red"/>
                 </span>
                 <h3
                   id="hs-task-created-alert-label"

@@ -15,35 +15,35 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const session = await auth()
+  const session = await auth();
   return (
     <html lang="en" suppressHydrationWarning>
       <SessionProvider session={session}>
-      <body
-        className={` antialiased selection:bg-primary selection:text-white`}
-      >
-        <ScrollYProgress />
-        <div className="fixed inset-0 -z-10">
-          <div
-            className="absolute inset-0 opacity-[0.03]"
-            style={{
-              backgroundImage: `linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)`,
-              backgroundSize: "60px 60px",
-            }}
-          />
-
-          <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-primary/5 blur-[120px] rounded-full" />
-          <div className="absolute bottom-[10%] right-[-5%] w-[40%] h-[40%] bg-primary/10 blur-[150px] rounded-full" />
-        </div>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-          enableSystem
-          disableTransitionOnChange
+        <body
+          className={` antialiased selection:bg-primary selection:text-white min-h-screen`}
         >
-          {children}
-        </ThemeProvider>
-      </body>
+          <ScrollYProgress />
+          <div className="fixed inset-0 -z-10">
+            <div
+              className="absolute inset-0 opacity-[0.03]"
+              style={{
+                backgroundImage: `linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)`,
+                backgroundSize: "60px 60px",
+              }}
+            />
+
+            <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-primary/5 blur-[120px] rounded-full" />
+            <div className="absolute bottom-[10%] right-[-5%] w-[40%] h-[40%] bg-primary/10 blur-[150px] rounded-full" />
+          </div>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="dark"
+            enableSystem
+            disableTransitionOnChange
+          >
+            {children}
+          </ThemeProvider>
+        </body>
       </SessionProvider>
     </html>
   );

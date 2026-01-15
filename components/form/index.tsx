@@ -103,7 +103,7 @@ export default function AuthForm({ formType }: { formType: string }) {
       {isErrorVisible && (
         <ErrorAlert
           isOpen={isErrorVisible}
-          message="Invalid credentials"
+          message="Try Agin"
           onClose={() => setIsErrorVisible(false)}
         />
       )}

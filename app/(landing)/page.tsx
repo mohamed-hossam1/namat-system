@@ -7,7 +7,7 @@ import WhyUsSection from "@/components/landing-page/whyus-section";
 import { auth } from "@/auth";
 
 export default async function Home() {
-  const session  = await auth()
+  const session  = await auth();
   console.log(session)
   return (
     <>
@@ -41,7 +41,6 @@ export default async function Home() {
         </div>
       </div>
 
-      <FooterSection />
     </>
   );
 }

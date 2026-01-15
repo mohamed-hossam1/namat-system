@@ -1,6 +1,4 @@
-import React from "react";
-import { FaBoltLightning } from "react-icons/fa6";
-import { IoCloseSharp } from "react-icons/io5";
+import { X, Zap } from "lucide-react";
 
 interface SuccessfulAlertProps {
   isOpen: boolean;
@@ -27,7 +25,7 @@ const SuccessfulAlert = ({
                 aria-label="Close"
                 data-hs-overlay="#hs-task-created-alert"
               >
-                <IoCloseSharp className="cursor-pointer w-6 h-6 text-gray-400 hover:text-red-500" />
+                <X className="cursor-pointer w-6 h-6 text-gray-400 hover:text-red-500" />
               </button>
             </div>
 
@@ -43,7 +41,7 @@ const SuccessfulAlert = ({
                 >
                   <path d="M11.251.068a.5.5 0 0 1 .227.58L9.677 6.5H13a.5.5 0 0 1 .364.843l-8 8.5a.5.5 0 0 1-.842-.49L6.323 9.5H3a.5.5 0 0 1-.364-.843l8-8.5a.5.5 0 0 1 .615-.09z" />
                 </svg> */}
-                <FaBoltLightning />
+                <Zap />
               </span>
 
               <h3

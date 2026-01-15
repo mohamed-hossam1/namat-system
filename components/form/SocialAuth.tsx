@@ -20,7 +20,7 @@ export default function SocialAuth() {
   const handelSocialAuth = async (provider: "google" | "github") => {
     try {
       await signIn(provider, {
-        callbackUrl: ROUTES.LABDING,
+        callbackUrl: ROUTES.ADMIN,
       });
     } catch (e) {
       console.log(e);

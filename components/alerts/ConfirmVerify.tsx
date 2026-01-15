@@ -1,4 +1,4 @@
-import { IoCloseSharp, IoShieldCheckmarkSharp } from "react-icons/io5";
+import { Check } from "lucide-react";
 
 interface ConfirmVerifyProps {
   isOpen: boolean;
@@ -22,7 +22,7 @@ const ConfirmVerify = ({
         <div className="p-4 sm:p-10">
           <div className="flex gap-x-4">
             <span className="shrink-0 inline-flex justify-center items-center size-12 rounded-full border-4 border-green-50 bg-green-100 text-green-500">
-              <IoShieldCheckmarkSharp className="w-6 h-6" />
+              <Check className="w-6 h-6" />
             </span>
             <div className="grow">
               <h3 className="mb-2 text-xl font-bold text-gray-800 dark:text-neutral-200">

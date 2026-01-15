@@ -1,4 +1,4 @@
 export const ROUTES = {
-  FACEBOOK: "/",
-  HOME: "/",
+  LABDING: "/",
+  LOGIN:"/login"
 }

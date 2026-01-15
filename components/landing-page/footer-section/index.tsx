@@ -3,26 +3,17 @@ import Link from "next/link";
 export default function FooterSection() {
   return (
     <>
-      <div className="md:flex justify-between text-secondary py-8 bg-foreground text-lg">
-        <div className="mx-auto flex md:mx-0 flex-col md:flex-row gap-7 lg:gap-10">
-          <div>
-            <Link href="">Privacy Policy</Link>
+      <footer className="relative z-10 py-20 px-8 text-center">
+        <div className="flex flex-col items-center gap-8">
+          <div className="flex items-center gap-2 opacity-50">
+            <div className="w-4 h-4 bg-primary rounded-sm rotate-45" />
+            <span className="font-black text-sm tracking-[0.3em]">NAMAT</span>
           </div>
-          <div>
-            {" "}
-            <Link href="">Terms of Service</Link>
-          </div>
-          <div>
-            <Link href="">Facebook</Link>
-          </div>
-          <div>
-            <Link href="">Tiktok</Link>
-          </div>
+          <p className="text-[10px] font-bold tracking-[0.5em] text-text-secondary">
+            © 2026 ALL RIGHTS RESERVED
+          </p>
         </div>
-        <div className="mt-10 md:mt-0">
-          <p>© 2026 NAMAT Software</p>
-        </div>
-      </div>
+      </footer>
     </>
   );
 }

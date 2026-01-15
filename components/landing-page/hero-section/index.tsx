@@ -50,7 +50,7 @@ export default function HeroSection() {
           className="mt-10 flex items-center justify-center gap-x-6"
         >
           <Link
-            href={ROUTES.FACEBOOK}
+            href={ROUTES.LOGIN}
             className=" transform duration-300 bg-primary-gradient font-medium  px-3 py-2  sm:px-7 sm:py-4 text-[17px] sm:text-2xl rounded-xl border  flex items-center  shadow-button hover:shadow-button-hover  justify-center"
           >
             Start Your Project

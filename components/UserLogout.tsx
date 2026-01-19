@@ -1,8 +1,7 @@
 import { LogOut, User } from "lucide-react";
-import ConfirmDelete from "./alerts/ConfirmDelete";
+import Confirm from "./alerts/Confirm";
 import { useRef, useState } from "react";
 
-import { useRouter } from "next/navigation";
 import { signOut } from "next-auth/react";
 import { useClickOutside } from "@/hooks/useClickOutside";
 
@@ -16,7 +15,6 @@ export default function UserLogout() {
     enabled: isDropDownOpen,
     closeOnEsc: true,
   });
-  const router = useRouter();
 
   const handleDropDown = () => {
     setIsDropDownOpen(!isDropDownOpen);
@@ -26,8 +24,7 @@ export default function UserLogout() {
     setIsConfirmVisible(true);
   };
   const handleConfirmLogout = async () => {
-    await signOut();
-    router.replace("/login");
+    await signOut({ redirectTo: "/login" });
   };
 
   return (
@@ -44,25 +41,18 @@ export default function UserLogout() {
             <button
               className="flex items-center w-full h-full px-4 py-2 text-sm text-gray-700 rounded-lg  hover:bg-accent hover:text-red-600transition-colors cursor-pointer group"
               onClick={handleLogout}
-            >
-              <span className="flex items-center justify-center w-8 h-8 rounded-full  text-red-500 mr-3 ">
-                <LogOut />
-              </span>
-              <span className="font-medium text-text-color">Logout</span>
-            </button>
+            ></button>
           </div>
         )}
       </div>
 
-      {isConfirmVisible && (
-        <ConfirmDelete
-          isOpen={isConfirmVisible}
-          onClose={() => setIsConfirmVisible(false)}
-          onConfirm={handleConfirmLogout}
-          message="Are you sure you want to Logout?"
-          button="Logout"
-        />
-      )}
+      <Confirm
+        isOpen={isConfirmVisible}
+        setIsOpen={(flag) => setIsConfirmVisible(flag)}
+        onConfirm={handleConfirmLogout}
+        message="Are you sure you want to Logout?"
+        button="Logout"
+      />
     </>
   );
 }

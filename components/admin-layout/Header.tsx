@@ -50,10 +50,7 @@ const Header = ({
         </div>
 
         <div className=" flex items-center gap-2">
-          <div>
-            <ModeToggle />
-          </div>
-          <UserLogout />
+
         </div>
       </div>
     </header>

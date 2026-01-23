@@ -20,6 +20,7 @@ export default function DashboardShell({
 
       <main className="flex-1  z-50 flex flex-col mx-6 md:ml-0 mb-6">
         <Header setIsMobileOpen={setIsMobileOpen} />
+        
 
         <div className="bg-background rounded-b-2xl p-6">{children}</div>
       </main>

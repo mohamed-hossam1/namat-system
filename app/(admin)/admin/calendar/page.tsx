@@ -1,5 +1,9 @@
-import React from "react";
+import Calendar from "@/components/calendar";
 
 export default function page() {
-  return <div>page</div>;
+  return (
+    <div>
+      <Calendar />
+    </div>
+  );
 }

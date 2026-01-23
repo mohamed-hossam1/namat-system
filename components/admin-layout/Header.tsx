@@ -1,11 +1,8 @@
 "use client";
-import Logo from "@/public/logo.png";
 import { usePathname } from "next/navigation";
-import Image from "next/image";
 import { Menu } from "lucide-react";
-import { ModeToggle } from "../ModeToggle";
-import { NAV_ITEMS } from "@/constants/routes";
-import UserLogout from "../UserLogout";
+import { NAV_ITEMS, ROUTES } from "@/constants/routes";
+import Link from "next/link";
 
 const Header = ({
   setIsMobileOpen,
@@ -22,7 +19,6 @@ const Header = ({
     >
       <div className="flex justify-between ">
         <div className="md:hidden flex items-center gap-4 ">
-
           <button
             onClick={() => setIsMobileOpen(true)}
             className="p-2 mx-auto h-fit  bg-primary-gradient cursor-pointer hover:bg-primary-gradient rounded-lg transition-colors"
@@ -40,7 +36,7 @@ const Header = ({
             {headerName ? headerName.label : ""}
           </h1>
         </div>
-
+        
       </div>
     </header>
   );

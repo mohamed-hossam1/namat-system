@@ -18,10 +18,10 @@ export default function DashboardShell({
 
       <Sidebar isMobileOpen={isMobileOpen} setIsMobileOpen={setIsMobileOpen} />
 
-      <main className="flex-1 flex flex-col mr-4">
+      <main className="flex-1  z-50 flex flex-col mx-6 md:ml-0 mb-6">
         <Header setIsMobileOpen={setIsMobileOpen} />
 
-        <div className="bg-background rounded-2xl mt-5">{children}</div>
+        <div className="bg-background rounded-b-2xl p-6">{children}</div>
       </main>
     </div>
   );

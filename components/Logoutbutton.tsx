@@ -22,7 +22,7 @@ export default function LogoutButton({
     <>
       <button
         onClick={handleLogout}
-        className={`bg-card m-5 ${isCollapsed ? "p-1" : "p-3"}  flex items-center border-border border cursor-pointer rounded-2xl`}
+        className={`bg-card m-6 ${isCollapsed ? "p-1" : "p-3"}  flex items-center border-border border cursor-pointer rounded-2xl hover:bg-input/30 transition-all duration-300`}
       >
         <span className="flex items-center justify-center w-8 h-8 rounded-full  text-red-500 ">
           <LogOut />

@@ -18,19 +18,11 @@ const Header = ({
 
   return (
     <header
-      className={`top-0 right-0 h-20 px-4 py-5 bg-background  mt-5  transition-all duration-300 rounded-2xl items-center`}
+      className={`top-0 right-0 h-20 px-6 py-5 bg-background  mt-6  transition-all duration-300 rounded-t-2xl items-center`}
     >
       <div className="flex justify-between ">
         <div className="md:hidden flex items-center gap-4 ">
-          <div className={`m-auto `}>
-            <Image
-              alt="Logo"
-              width={55}
-              height={55}
-              src={Logo}
-              className="mx-auto bg-primary-foreground"
-            />
-          </div>
+
           <button
             onClick={() => setIsMobileOpen(true)}
             className="p-2 mx-auto h-fit  bg-primary-gradient cursor-pointer hover:bg-primary-gradient rounded-lg transition-colors"
@@ -49,9 +41,6 @@ const Header = ({
           </h1>
         </div>
 
-        <div className=" flex items-center gap-2">
-
-        </div>
       </div>
     </header>
   );

@@ -25,16 +25,16 @@ const Sidebar = ({
   return (
     <aside
       className={`
-        fixed md:sticky top-0 h-[96vh] bg-background rounded-2xl  transition-all duration-300 z-40  m-4
+        fixed md:sticky top-0 h-[94.9vh] bg-background rounded-2xl transition-all duration-300 z-90  m-6
         ${isCollapsed ? "md:w-20" : "md:w-64"}
         w-64
-        ${isMobileOpen ? "-translate-x-4" : "-translate-x-[106%]"}
+        ${isMobileOpen ? "-translate-x-4" : "-translate-x-[120%]"}
         md:translate-x-0
       `}
     >
       <div className="flex flex-col  justify-between h-full">
         <div>
-          <div className="flex justify-between pl-5 pr-7 py-4 h-22 items-center">
+          <div className={`flex justify-between ${isCollapsed?"pl-5":"pl-6"} pl-5 pr-6 py-4 h-22 items-center`}>
             <div className={`   ${isCollapsed ? "hidden md:hidden" : ""}`}>
               <div>
                 <Image alt="Logo" width={55} height={55} src={Logo} />
@@ -68,7 +68,7 @@ const Sidebar = ({
           <nav className=" overflow-hidden ">
             <p
               className={`text-secondary font-bold  ${
-                isCollapsed ? "text-center" : "pl-5"
+                isCollapsed ? "text-center" : "pl-6"
               } transition-all duration-300 py-5`}
             >
               MENU
@@ -116,7 +116,6 @@ const Sidebar = ({
             </div>
           </nav>
         </div>
-        <div></div>
 
         <LogoutButton isCollapsed={isCollapsed} />
       </div>

@@ -1,6 +1,6 @@
 import { SectionHeader } from "@/components/ui/SectionHeader";
-import SubTitle from "@/components/ui/subtitle";
-import Title from "@/components/ui/title";
+import SubTitle from "@/components/ui/Subtitle";
+import Title from "@/components/ui/Title";
 import { Code, Figma, Rocket, SquareChartGantt } from "lucide-react";
 import * as motion from "motion/react-client";
 

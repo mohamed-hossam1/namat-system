@@ -1,5 +1,5 @@
 import { SectionHeader } from "@/components/ui/SectionHeader";
-import SubTitle from "@/components/ui/subtitle";
+import SubTitle from "@/components/ui/Subtitle";
 import * as motion from "motion/react-client";
 
 import {
@@ -74,7 +74,7 @@ export default function ServicesSection() {
             <h3 className="font-bold  text-[30px]/10 whitespace-pre-line">
               {service.title}
             </h3>
-            <SubTitle >{service.subtitle}</SubTitle>
+            <SubTitle>{service.subtitle}</SubTitle>
           </motion.div>
         ))}
       </div>

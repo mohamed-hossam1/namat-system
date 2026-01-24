@@ -1,18 +1,39 @@
 import { getNextMonth, getPrevMonth } from "@/lib/date";
 import { ArrowLeft, ArrowRight, Calendar1 } from "lucide-react";
-import React from "react";
 
 interface HeaderProps {
-  currentData: { year: number; month: string };
-  setCurrentData: (data: { year: number; month: string; day: string }) => void;
+  currentDate: Date;
+  setCurrentDate: (date: Date) => void;
 }
 
-export default function Header({ currentData, setCurrentData }: HeaderProps) {
+export default function Header({ currentDate, setCurrentDate }: HeaderProps) {
+  const currentData = {
+    year: currentDate.getFullYear(),
+    month: [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December",
+    ][currentDate.getMonth()],
+  };
+
   const nextMonth = () => {
-    setCurrentData(getNextMonth(currentData.year, currentData.month));
+    const next = new Date(currentDate);
+    next.setMonth(next.getMonth() + 1);
+    setCurrentDate(next);
   };
   const prevMonth = () => {
-    setCurrentData(getPrevMonth(currentData.year, currentData.month));
+    const prev = new Date(currentDate);
+    prev.setMonth(prev.getMonth() - 1);
+    setCurrentDate(prev);
   };
   return (
     <div className="flex justify-between items-center">

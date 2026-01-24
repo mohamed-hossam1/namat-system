@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { ThemeProvider } from "@/lib/providers/theme-provider";
-import ScrollYProgress from "@/components/ScrollYProgress";
+import ScrollYProgress from "@/components/ui/ScrollYProgress";
 import { SessionProvider } from "next-auth/react";
 import { auth } from "@/auth";
 

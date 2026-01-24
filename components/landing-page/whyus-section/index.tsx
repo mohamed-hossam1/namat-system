@@ -1,4 +1,4 @@
-import SubTitle from "@/components/ui/subtitle";
+import SubTitle from "@/components/ui/Subtitle";
 import { Eye, Ban, Gauge } from "lucide-react";
 import * as motion from "motion/react-client";
 

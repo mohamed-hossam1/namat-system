@@ -1,17 +1,18 @@
 "use client";
 
-import React, { useState } from "react";
+import { useState } from "react";
 import Header from "./Header";
 import { getDate, getDaysGrid } from "@/lib/date";
+import EnterAnimation from "../motion/EnterAnimation";
 
 export default function Calendar() {
   const weeks = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-  const [currentData, setCurrentData] = useState(
-    getDate(new Date().getFullYear(), new Date().getMonth()),
-  );
+  const [currentDate, setCurrentDate] = useState(new Date());
+  const currentData = getDate(currentDate);
+
   return (
     <div>
-      <Header currentData={currentData} setCurrentData={setCurrentData} />
+      <Header currentDate={currentDate} setCurrentDate={setCurrentDate} />
       <div className="bg-card p-5 border border-border rounded-2xl mt-4">
         <div>
           <div className="grid grid-cols-7 gap-3">
@@ -22,19 +23,20 @@ export default function Calendar() {
             ))}
           </div>
           <div className="grid grid-cols-7 gap-3">
-            {getDaysGrid(currentData.year, currentData.month).map((day, i) => (
-              <div
-                key={i}
-                className={`h-40 flex p-6 rounded-lg border ${
-                  day === 0
-                    ? "bg-transparent border-transparent"
-                    : "bg-input border-border hover:bg-primary/10 cursor-pointer transition-all shadow-xl"
-                }`}
-              >
-                {day !== 0 && (
-                  <p className="font-semibold text-text-secondary ">{day}</p>
-                )}
-              </div>
+            {getDaysGrid(currentDate).map((day, i) => (
+              <EnterAnimation key={i}>
+                <div
+                  className={`h-40 flex p-6 rounded-lg border ${
+                    day === 0
+                      ? "bg-transparent border-transparent"
+                      : "bg-input border-border hover:bg-primary/10 cursor-pointer transition-all shadow-xl"
+                  }`}
+                >
+                  {day !== 0 && (
+                    <p className="font-semibold text-text-secondary ">{day}</p>
+                  )}
+                </div>
+              </EnterAnimation>
             ))}
           </div>
         </div>
